@@ -1,8 +1,0 @@
-.header {
-    @include clearfix();
-    @include uldev();
-    @include boxsize();
-    background: $black;
-    color: $white;
-}
-
