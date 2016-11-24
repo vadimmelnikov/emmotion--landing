@@ -7,13 +7,13 @@ html
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		//- <!--[if IE 8]>script(src='/ie.js')<![endif]-->
 		include head_style/_head_style
-	body
-		.wrapper
-			.content
-				include header/_header
-				include main/_main
-			include footer/_footer
+	body(data-aos="fade", data-aos-easing="ease", data-aos-delay="1000")
+		include header/_header
+		include main/_main
+		include footer/_footer
 		include scripts/_scripts
+		script.
+			AOS.init();
 
 
 

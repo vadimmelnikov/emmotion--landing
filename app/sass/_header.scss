@@ -1,8 +1,222 @@
 .header {
-    @include clearfix();
-    @include uldev();
-    @include boxsize();
-    background: $black;
-    color: $white;
+  @include clearfix();
+  @include uldev();
+  @include boxsize();
+  background: $white;
+  color: $black;
+
+  @include breakpoint(phablet) {
+	height: 130px;
+  }
 }
 
+.logo {
+
+  @include breakpoint(phablet) {
+	max-width: 212px;
+  }
+  & img{
+	margin: 15px auto;
+	@include breakpoint(phablet) {
+	  margin: 0;
+	}
+  }
+}
+.header-flex{
+  height:100%;
+
+  @include breakpoint(phablet) {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+}
+
+.navigation {
+  width: 100%;
+  text-align: center;
+  @include breakpoint(phablet) {
+	text-align: left;
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  @include breakpoint(laptop) {
+	width: 50%;
+  }
+  @include breakpoint(desktop) {
+	width: 38.2%;
+  }
+
+
+}
+.social{
+  @include uldev();
+  &__item{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+	margin-right: 25px;
+	&:last-child{
+	  margin-right:0;
+	}
+	&:hover{
+	  opacity:0.4;
+	  transition: all 0.4s;
+	}
+  }
+  margin-bottom:15px;
+  margin-top:10px;
+  text-align: center;
+  @include breakpoint(phablet) {
+	margin-bottom:0;
+	margin-top:0;
+	text-align: left;
+  }
+}
+.tel{
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "OpenSansLight";
+  display: block;
+  text-align: center;
+  margin-bottom:15px;
+  margin-right:0;
+  @include breakpoint(mobile) {
+	margin-right:15px;
+	display: inline-block;
+  }
+  @include breakpoint(phablet) {
+	margin-right:0;
+	margin-bottom:0;
+	display: inline;
+	width:auto;
+	text-align: left;
+  }
+  &:hover{
+	opacity:0.4;
+	transition: all 0.4s;
+  }
+}
+.mail{
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin-bottom:10px;
+  margin-right:0;
+  margin-left:0;
+  padding: 8px 15px;
+  border: 2px solid $black;
+  @include breakpoint(mobile) {
+	display: inline-block;
+	margin-left:15px;
+  }
+  @include breakpoint(phablet) {
+	margin-left:0;
+	margin-bottom:0;
+	display: inline-block;
+	width:auto;
+	text-align: left;
+  }
+  &:hover{
+	background-color: #000;
+	color: #fff;
+	opacity:1;
+	transition: all 0.4s;
+  }
+}
+.bgr-h{
+  background-image: url('../images/bgr--small.jpg');
+  @include breakpoint(phablet) {
+	background-image: url('../images/bgr.jpg');
+  }
+  overflow: hidden;
+  /* Full height */
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 50px 0;
+  @include breakpoint(phablet) {
+	padding: 100px 0;
+  }
+  &__title{
+	color: $black;
+	text-align: center;
+	letter-spacing: 0.01em;
+	margin-bottom:30px;
+	font-size: 21px;
+	@include breakpoint(phablet) {
+	  margin-bottom:100px;
+	  font-size:36px;
+	}
+  }
+  &__descr{
+	line-height:72px;
+	letter-spacing:0.025em;
+	text-align: center;
+	font-size: 24px;
+	margin-bottom:30px;
+	@include breakpoint(phablet) {
+	  margin-bottom:80px;
+	  font-size:48px;
+	}
+  }
+}
+.future{
+  @include uldev();
+  text-align: center;
+  @include breakpoint(mobile) {
+	text-align: left;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  &__item{
+	font-size:0;
+	@include boxsize();
+	display: inline-block;
+	width:100%;
+	@include breakpoint(mobile) {
+	  display: block;
+	  width:auto;
+	}
+  }
+  &__descr{
+	font-size: 16px;
+  }
+  &__pic{
+	margin: 0 auto;
+	width:40px;
+	@include breakpoint(mobile) {
+	  margin: auto;
+	  display: inline-block;
+	  vertical-align: middle;
+	}
+	@include breakpoint(phablet) {
+	  width:70px;
+	}
+  }
+  &__descr{
+	font-size: 24px;
+
+	@include boxsize();
+	margin-left:0;
+	margin-bottom:30px;
+	@include breakpoint(mobile) {
+	  margin-bottom:0;
+	  margin-left:15px;
+	  display: inline-block;
+	  vertical-align: middle;
+	}
+	@include breakpoint(phablet) {
+	  font-size: 34px;
+	}
+
+  }
+}

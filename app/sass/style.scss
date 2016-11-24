@@ -1,19 +1,10 @@
 @import "_variables";
 @import "_mixins";
 @import "_normalize.scss";
-@import "_fonts.scss";
-@import "_header.scss";
-@import "_footer.scss";
-@import "_images.scss";
-
-* {
-    -webkit-transition: all 0.1s;
-    transition: all 0.1s;
-}
 
 html,
 body {
-    height: 100%;
+    min-height: 100%;
 }
 
 img {
@@ -25,7 +16,8 @@ img {
 body {
     color: #333;
 
-    font-size: 13px;
+
+    font-size: 16px;
     & a {
         color: #333;
         &:hover {
@@ -33,8 +25,10 @@ body {
         }
     }
     font-family: "OpenSansRegular";
+    -webkit-font-smoothing: antialiased;
+  	transition-duration: 4000ms;
 }
-
+@import "_fonts.scss";
 .wrapper {
     position: relative;
     min-height: 100%;
@@ -44,13 +38,32 @@ body {
 }
 .container {
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 3%;
     position: relative;
     @include clearfix();
     @include breakpoint(phablet) {
-        max-width: 1140px;
+        max-width: 760px;
         // padding: 0 5%;
     }
+}
+.header-container{
+    margin: 0 auto;
+    padding: 0 3%;
+    position: relative;
+    @include clearfix();
+    height:100%;
+    @include breakpoint(phablet) {
+        max-width: 1750px;
+    }
+}
+.container--footer{
+  margin: 0 auto;
+  padding: 0 3%;
+  position: relative;
+  @include clearfix();;
+  @include breakpoint(phablet) {
+	max-width: 1240px;
+  }
 }
 
 .main{
@@ -72,3 +85,11 @@ body {
         color: #fff;
     }
 }
+.bold{
+  font-family: "OpenSansBold";
+}
+@import "_slider.scss";
+@import "_header.scss";
+@import "_content.scss";
+@import "_footer.scss";
+@import "_images.scss";

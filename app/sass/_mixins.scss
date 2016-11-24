@@ -50,21 +50,25 @@
 //Медиазапросы для разных разрешений. Указаны в em, чтобы в сафари при увеличения масштаба бреикпоинты срабатывали
 @mixin breakpoint($point) {
   @if $point == desktop {
-    @media (min-width: 70em) { @content ; }
+    @media (min-width: 95em) { @content ; }
   }
   @else if $point == laptop {
-    @media (min-width: 64em) { @content ; }
+    @media (min-width: 67em) { @content ; }
   }
   @else if $point == tablet {
     @media (min-width: 50em) { @content ; }
   }
   @else if $point == phablet {
-    @media (min-width: 37.5em)  { @content ; }
+    @media (min-width: 48em)  { @content ; }
+  }
+  @else if $point == mobile {
+    @media (min-width: 36em)  { @content ; }
   }
   @else if $point == mobileonly {
-    @media (max-width: 37.5em)  { @content ; }
+    @media (max-width: 36em)  { @content ; }
 
   }
+
 }
 //Пример брекпоинтов
 //.grid-1-4 {

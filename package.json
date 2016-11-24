@@ -25,6 +25,7 @@
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^2.0.1",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-sprites": "^4.0.2",
     "gulp-uglify": "~1.2.0",
     "imagemin-pngquant": "^4.0.0",
     "main-bower-files": "~2.8.0",

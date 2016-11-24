@@ -13,7 +13,9 @@ var mainBowerFiles = require('main-bower-files'),
     autoprefixer = require('gulp-autoprefixer'),
     cssmin = require('gulp-cssmin'),
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant');
+    pngquant = require('imagemin-pngquant'),
+    svgSprite = require("gulp-svg-sprites"),
+    watch = require('gulp-watch');
 
 var dest_path = 'public';
 function log(error) {
@@ -95,10 +97,10 @@ gulp.task('libs', function() {
     // что бы эти глюкобажные либы тоже скопировались!
     var fix_libs_paths = [
         // 'corner/jquery.corner.js',
-        'normalize-css/normalize.css',
+        // 'normalize-css/normalize.css',
         // 'respond/dest/respond.min.js',
         'jquery/dist/jquery.js',
-        // 'bxslider-4/dist/jquery.bxslider.js',
+        // 'lory/dist/lory.js',
         // 'bxslider-4/dist/jquery.bxslider.css',
         // 'owlcarousel/assets/css/owl.carousel.css',
         // 'owlcarousel/assets/css/responsiv.css',
@@ -159,11 +161,9 @@ gulp.task('libs', function() {
 gulp.task('build', [
     'jade',
     'sass',
-    
     'js',
     'image',
     'fonts',
-
     'libs'
 ]);
 
@@ -175,16 +175,32 @@ gulp.task('clean', function (cb) {
 
 
 // Слежка
+
 gulp.task('watch', function() {
-    gulp.watch(['./app/templates/**/*.jade'], ['jade']);
-    gulp.watch(['./app/sass/**/*.scss'], ['sass']);
-    gulp.watch(['./app/js/**/*.js'], ['js']);
-
-    gulp.watch(['./app/images/**/*.*'], ['image']);
-    gulp.watch(['./app/sass/fonts/**/*.*'], ['fonts']);
-    
-
-    gulp.watch(['./bower.json'], ['libs']);
+    watch(['./app/images/**/*.*'], function(event, cb) {
+        gulp.start('image');
+    });
+    watch(['./app/templates/**/*.jade'], function(event, cb) {
+        gulp.start('jade');
+    });
+    watch(['./app/sass/**/*.scss'], function(event, cb) {
+        gulp.start('sass');
+    });
+    watch(['./app/js/**/*.js'], function(event, cb) {
+        gulp.start('js');
+    });
+    watch(['./app/sass/fonts/**/*.*'], function(event, cb) {
+        gulp.start('fonts');
+    });
+    watch(['./bower.json'], function(event, cb) {
+        gulp.start('libs');
+    });
+    // gulp.watch(['], ['jade']);
+    // gulp.watch(['./app/sass/**/*.scss'], ['sass']);
+    // gulp.watch(['./app/js/**/*.js'], ['js']);
+    // gulp.watch(['./app/images/**/*.*'], ['image']);
+    // gulp.watch(['./app/sass/fonts/**/*.*'], ['fonts']);
+    // gulp.watch(['./bower.json'], ['libs']);
 });
 
 // Запуск сервера c лайврелоадом
@@ -212,3 +228,9 @@ gulp.task('default', ['serv_livereload', 'watch']);
 
 // Для ie
 gulp.task('serv', ['serv_no_livereload', 'watch']);
+
+gulp.task('sprites', function () {
+    return gulp.src('app/images/svg/*.svg')
+        .pipe(svgSprite({mode: "defs"}))
+        .pipe(gulp.dest("assets"));
+});
