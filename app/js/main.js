@@ -18,5 +18,25 @@ $(document).ready(function() {
 			}
 		]
 	});
+	var url = $("#youtube").attr("src");
+	$('.video__button').bind('click', function (e) {
+
+		// Prevents the default action to be triggered.
+		e.preventDefault();
+
+		// Triggering bPopup when click event is fired
+		$('#popup').bPopup({
+			opacity: 0.8,
+			transitionClose: 'slideUp',
+			onOpen: function() {
+				$("#youtube").attr("src", url)
+			},
+			onClose: function() {
+				$("#youtube").attr("src", "")
+			}
+
+		});
+
+	});
 
 });

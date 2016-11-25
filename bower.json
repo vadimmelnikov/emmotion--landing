@@ -19,7 +19,8 @@
     "jquery": "^2.2.3",
     "modernizr": "2.6.2",
     "normalize-css": "normalize.css#^4.1.1",
-    "lory": "^2.2.1"
+    "lory": "^2.2.1",
+    "bPopup": "bpopup#^0.11.0"
   },
   "dependencies": {
     "aos": "^2.1.1",

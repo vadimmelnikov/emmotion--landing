@@ -7,11 +7,17 @@ html
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		//- <!--[if IE 8]>script(src='/ie.js')<![endif]-->
 		include head_style/_head_style
-	body(data-aos="fade", data-aos-easing="ease", data-aos-delay="1000")
+	body
 		include header/_header
 		include main/_main
 		include footer/_footer
 		include scripts/_scripts
+		.popup#popup
+			.popup__wrap
+				.b-close
+					svg(viewbox='0 0 40 40')
+						path.close-x(d='M 10,10 L 30,30 M 30,10 L 10,30')
+				iframe#youtube(width='100%', height='500', src='https://www.youtube.com/embed/pp88uZ1DSGA', frameborder='0', allowfullscreen='')
 		script.
 			AOS.init();
 

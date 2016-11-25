@@ -165,6 +165,7 @@
 .slick-prev:hover,
 .slick-next:hover{
   opacity:0.4;
+  transition: all 0.2s;
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,

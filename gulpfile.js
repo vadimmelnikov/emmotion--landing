@@ -100,7 +100,7 @@ gulp.task('libs', function() {
         // 'normalize-css/normalize.css',
         // 'respond/dest/respond.min.js',
         'jquery/dist/jquery.js',
-        // 'lory/dist/lory.js',
+        'bPopup/jquery.bpopup.js',
         // 'bxslider-4/dist/jquery.bxslider.css',
         // 'owlcarousel/assets/css/owl.carousel.css',
         // 'owlcarousel/assets/css/responsiv.css',
