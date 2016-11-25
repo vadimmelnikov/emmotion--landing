@@ -471,51 +471,35 @@ body a:hover {
   font-style: normal;
   font-weight: normal; }
 
-/* font-family: "HelveticaRegular"; */
+/* font-family: "RobotoRegular"; */
 @font-face {
-  font-family: "HelveticaRegular";
-  src: url("../fonts/HelveticaRegular/HelveticaRegular.eot");
-  src: url("../fonts/HelveticaRegular/HelveticaRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaRegular/HelveticaRegular.woff") format("woff"), url("../fonts/HelveticaRegular/HelveticaRegular.ttf") format("truetype");
+  font-family: "RobotoRegular";
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 
-/* font-family: "HelveticaBold"; */
+/* font-family: "RobotoLight"; */
 @font-face {
-  font-family: "HelveticaBold";
-  src: url("../fonts/HelveticaBold/HelveticaBold.eot");
-  src: url("../fonts/HelveticaBold/HelveticaBold.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaBold/HelveticaBold.woff") format("woff"), url("../fonts/HelveticaBold/HelveticaBold.ttf") format("truetype");
+  font-family: "RobotoLight";
+  src: url("../fonts/RobotoLight/RobotoLight.eot");
+  src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoLight/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 
-/* font-family: "HelveticaItalic"; */
+/* font-family: "RobotoMedium"; */
 @font-face {
-  font-family: "HelveticaItalic";
-  src: url("../fonts/HelveticaItalic/HelveticaItalic.eot");
-  src: url("../fonts/HelveticaItalic/HelveticaItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaItalic/HelveticaItalic.woff") format("woff"), url("../fonts/HelveticaItalic/HelveticaItalic.ttf") format("truetype");
+  font-family: "RobotoMedium";
+  src: url("../fonts/RobotoMedium/RobotoMedium.eot");
+  src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"), url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 
-/* font-family: "HelveticaRegular"; */
+/* font-family: "RobotoBold"; */
 @font-face {
-  font-family: "HelveticaRegular";
-  src: url("../fonts/HelveticaRegular/HelveticaRegular.eot");
-  src: url("../fonts/HelveticaRegular/HelveticaRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaRegular/HelveticaRegular.woff") format("woff"), url("../fonts/HelveticaRegular/HelveticaRegular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal; }
-
-/* font-family: "HelveticaBold"; */
-@font-face {
-  font-family: "HelveticaBold";
-  src: url("../fonts/HelveticaBold/HelveticaBold.eot");
-  src: url("../fonts/HelveticaBold/HelveticaBold.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaBold/HelveticaBold.woff") format("woff"), url("../fonts/HelveticaBold/HelveticaBold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal; }
-
-/* font-family: "HelveticaItalic"; */
-@font-face {
-  font-family: "HelveticaItalic";
-  src: url("../fonts/HelveticaItalic/HelveticaItalic.eot");
-  src: url("../fonts/HelveticaItalic/HelveticaItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaItalic/HelveticaItalic.woff") format("woff"), url("../fonts/HelveticaItalic/HelveticaItalic.ttf") format("truetype");
+  font-family: "RobotoBold";
+  src: url("../fonts/RobotoBold/RobotoBold.eot");
+  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 
@@ -840,10 +824,12 @@ body a:hover {
     margin: 0; } }
 
 .header-flex {
-  height: 100%; }
+  height: 100%;
+  padding: 15px 0; }
 
 @media (min-width: 48em) {
   .header-flex {
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -853,6 +839,14 @@ body a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; } }
+
+.italic {
+  font-family: "OpenSansSemiBoldItalic";
+  font-size: 16px; }
+
+@media (min-width: 48em) {
+  .italic {
+    font-size: 18px; } }
 
 .navigation {
   width: 100%;
@@ -992,7 +986,7 @@ body a:hover {
   letter-spacing: 0.01em;
   margin-bottom: 30px;
   font-size: 21px;
-  font-family: "HelveticaRegular"; }
+  font-family: "RobotoRegular"; }
 
 @media (min-width: 48em) {
   .bgr-h__title {
@@ -1010,6 +1004,14 @@ body a:hover {
   .bgr-h__descr {
     margin-bottom: 80px;
     font-size: 48px; } }
+
+.small-txt {
+  font-family: "RobotoRegular";
+  font-size: 16px; }
+
+@media (min-width: 48em) {
+  .small-txt {
+    font-size: 21px; } }
 
 .future {
   margin: 0;
@@ -1144,7 +1146,8 @@ body a:hover {
 .slider__name {
   font-size: 18px;
   margin-bottom: 25px;
-  text-align: center; }
+  text-align: center;
+  font-family: "RobotoRegular"; }
 
 @media (min-width: 48em) {
   .slider__name {
@@ -1169,7 +1172,7 @@ body a:hover {
   text-align: center;
   letter-spacing: 0.02em;
   margin-bottom: 30px;
-  text-align: center; }
+  font-family: "RobotoRegular"; }
 
 @media (min-width: 48em) {
   .slide-title {
@@ -1247,12 +1250,14 @@ body a:hover {
   text-align: center; }
 
 .percent__head {
+  font-family: "RobotoBold";
+  font-style: italic;
   position: absolute;
   right: 24px;
   top: -35px;
   font-size: 50px;
   z-index: 10;
-  color: #ff4e22; }
+  color: #e73827; }
 
 .percent:after {
   content: '';
@@ -1335,10 +1340,12 @@ body a:hover {
             transform: translateY(100%); } }
 
 .team__title {
-  font-size: 18px; }
+  font-size: 18px;
+  font-family: "RobotoRegular"; }
 
 .team__who {
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: "RobotoBold"; }
 
 .t-border {
   -webkit-transition: all .2s ease-in-out;
