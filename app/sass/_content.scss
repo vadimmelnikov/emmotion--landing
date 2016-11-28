@@ -203,6 +203,7 @@
 	display: inline-block;
 	padding-right:10px;
 	overflow: hidden;
+	cursor: pointer;
 	@include breakpoint(phablet) {
 	  width:33.333333333%;
 	}
