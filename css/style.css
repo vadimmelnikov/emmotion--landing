@@ -1320,6 +1320,7 @@ body a:hover {
   display: inline-block;
   padding-right: 10px;
   overflow: hidden;
+  cursor: pointer;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 10px; }
