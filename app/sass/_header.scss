@@ -165,14 +165,14 @@
 	}
   }
   &__descr{
-	line-height:72px;
 	letter-spacing:0.025em;
 	text-align: center;
 	font-size: 24px;
 	margin-bottom:30px;
 	@include breakpoint(phablet) {
+	  line-height:70px;
 	  margin-bottom:80px;
-	  font-size:48px;
+	  font-size:40px;
 	}
   }
 }
@@ -233,5 +233,14 @@
 	  font-size: 34px;
 	}
 
+  }
+}
+.tab-content{
+  display: none;
+  opacity: 0;
+  @include anim();
+  &.current{
+	display: block;
+	opacity: 1;
   }
 }

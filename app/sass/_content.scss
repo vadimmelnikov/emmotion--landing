@@ -208,6 +208,9 @@
 	}
 	@include boxsize();
 	margin-bottom:10px;
+	&.current .t-border{
+	  border-color: rgba(255,78,34,1);
+	}
 	&:hover .t-border{
 	  border-color: rgba(255,78,34,1);
 	}
