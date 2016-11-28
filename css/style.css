@@ -994,7 +994,6 @@ body a:hover {
     font-size: 36px; } }
 
 .bgr-h__descr {
-  line-height: 72px;
   letter-spacing: 0.025em;
   text-align: center;
   font-size: 24px;
@@ -1002,8 +1001,9 @@ body a:hover {
 
 @media (min-width: 48em) {
   .bgr-h__descr {
+    line-height: 70px;
     margin-bottom: 80px;
-    font-size: 48px; } }
+    font-size: 40px; } }
 
 .small-txt {
   font-family: "RobotoRegular";
@@ -1078,6 +1078,26 @@ body a:hover {
 @media (min-width: 48em) {
   .future__descr {
     font-size: 34px; } }
+
+.tab-content {
+  display: none;
+  opacity: 0;
+  -moz-animation-name: dropHeader;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-duration: 0.3s;
+  -webkit-animation-name: dropHeader;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.3s;
+  animation-name: dropHeader;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.3s; }
+
+.tab-content.current {
+  display: block;
+  opacity: 1; }
 
 .content {
   background-color: #fff;
@@ -1307,6 +1327,9 @@ body a:hover {
 @media (min-width: 48em) {
   .team__item {
     width: 33.333333333%; } }
+
+.team__item.current .t-border {
+  border-color: #ff4e22; }
 
 .team__item:hover .t-border {
   border-color: #ff4e22; }
