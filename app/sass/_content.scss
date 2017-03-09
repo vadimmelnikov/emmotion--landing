@@ -92,17 +92,17 @@
   }
 }
 .bgr-b{
-  background-image: url('../images/bgr3--small.jpg');
+  background: url('../images/bgr3--small.jpg') right;
   @include breakpoint(phablet) {
 	background-image: url('../images/bgr3.jpg');
-	background-attachment: fixed;
+	//background-attachment: fixed;
   }
   overflow: hidden;
   /* Full height */
 
   /* Create the parallax scrolling effect */
 
-  background-position: center;
+  //background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 40px 0;
@@ -112,7 +112,7 @@
   }
 }
 .big-title{
-  text-align: center;
+  //text-align: center;
   font-size: 36px;
   margin-bottom:70px;
   position: relative;
@@ -149,6 +149,7 @@
 .bgr-t{
   background-color: #fff;
   padding: 40px 0;
+	overflow: hidden;
 }
 .percent{
   font-family: "OpenSansLight";
@@ -193,22 +194,25 @@
   @include uldev();
   font-size:0;
   text-align: center;
-  margin-right: -10px;
-  margin-bottom:40px;
+  //margin-right: -10px;
+  //margin-bottom:40px;
+	display: flex;
+	justify-content: center;
   &__item{
 	position: relative;
 	font-size:16px;
 	max-width:280px;
 	max-height:280px;
-	display: inline-block;
+	//display: inline-block;
 	padding-right:10px;
 	overflow: hidden;
 	cursor: pointer;
-	@include breakpoint(phablet) {
-	  width:33.333333333%;
-	}
+	  width:35%;
 	@include boxsize();
 	margin-bottom:10px;
+	  &:last-child{
+		  margin-right:0;
+	  }
 	&.current .t-border{
 	  border-color: rgba(255,78,34,1);
 	}
